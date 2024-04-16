@@ -25,7 +25,7 @@ function App() {
   const data = CurrencyConverter(fromCurrencyType);
 
   const convertCurrency=()=>{
-
+      
   }
 
 
@@ -36,6 +36,9 @@ function App() {
       <div className=" flex-col bg-white p-6 justify-center w-1/3 mx-auto items-center">
         <InputBox labelName={'From'} currencies={currencies}  currencyType={fromCurrencyType} onChangeType={onChangeFromCurrencyType} onChangeValue={onChangeFromvalue} value={fromValue}/>
         <InputBox labelName={'To'} currencies={currencies} currencyType={toCurrencyType} onChangeType={onChangeToCurrencyType} />
+        <div className="flex justify-center">
+        <button className=" bg-blue-500 rounded-md px-5 py-3 text-white" onClick={convertCurrency}>Submit</button>
+        </div>
       </div>
     </>
   );
