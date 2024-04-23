@@ -4,11 +4,11 @@ export default function Counter() {
     const[count, setCounter]= useState(0);
 
     const increment=()=>{
-        setCounter(count+1);
+        setCounter(count=>count+1);
         console.log(count);
     }
     const decrement=()=>{
-        setCounter(count-1);
+        setCounter(count=>count-1);
         console.log(count);
     }
     return(<>

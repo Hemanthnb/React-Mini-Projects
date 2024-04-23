@@ -5,7 +5,7 @@ export default function InputBox({
   currencies = [],
   onChangeType,
   currencyType='usd',
-  readOnly=null,
+  readonly=null,
   onChangeValue,
   value=0,
 }) {
@@ -13,8 +13,8 @@ export default function InputBox({
   // console.log(currencies)
   return (
     <>
-      <div className="flex justify-evenly items-center">
-        <div className="flex-col justify-center items-center">
+      <div className="flex justify-evenly items-center bg-white px-12 py-6 rounded-md ">
+        <div className="flex-col justify-center items-center  p-4 ">
           <label htmlFor="amount" className="block text-gray-400 font-medium">
             {labelName}
           </label>
@@ -25,7 +25,7 @@ export default function InputBox({
             type="number"
             value={value}
             onChange={(event) => onChangeValue(event.target.value)}
-            // readOnly={readOnly?'readOnly':null}
+            readOnly={readonly}
           />
         </div>
 
@@ -34,7 +34,7 @@ export default function InputBox({
             Currency Type
           </label>
           <select
-          className=" bg-gray-100 border  rounded py-2 max-h-20 overflow-y-auto mb-4"
+          className=" bg-gray-100 border  rounded py-2 overflow-y-auto mb-4"
             id="currencyType"
             value={currencyType}
             onChange={(event) => onChangeType(event.target.value)}
