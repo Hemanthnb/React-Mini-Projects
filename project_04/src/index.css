@@ -9,11 +9,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('/Users/testvagrant-1/Desktop/React-Mini-Projects/project_04/.webp.webp');
+  /* background-image: url('/Users/testvagrant-1/Desktop/React-Mini-Projects/project_04/.webp.webp'); */
   opacity: 0.9;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root::before{
+  content: '';
+  background-image: url('/Users/testvagrant-1/Desktop/React-Mini-Projects/project_04/src/assets/images/home.jpg');
+  position: absolute;
+  width: 100%;
+  height:100%;
+  z-index: -1;
+  opacity:1;
+  background-size: cover;
 }

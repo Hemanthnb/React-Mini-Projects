@@ -74,21 +74,23 @@ export default function PasswordGenerator() {
   };
 
   return (
-    <div className=" w-1/2 mx-auto bg-gray-500 border-green-200 h-40 flex flex-col items-center">
-      <h2 className="text-center mb-5">Password Generator</h2>
-      <div>
+    <div className="sm:flex justify-center items-center">
+    <div className=" p-14 bg-gray-500 md:flex-col rounded-sm">
+      <h2 className="text-center mb-5 text-white font-semibold text-lg">Password Generator</h2>
+      <div className="sm:flex p-3 w-full justify-between">
         <input
           type="text"
           id="password"
           readOnly
-          className="text-center mb-10 h-10 p-1"
+          className="text-center rounded-sm w-2/3 p-3"
           value={password}
           ref={passwordRef}
         />
-        <button className="w-16 h-10 ml-2 bg-red-500" onClick={copyText}>
+        <button className=" bg-blue-500 p-3 rounded-s text-white" onClick={copyText}>
           copy
         </button>
       </div>
+      
       <div>
         <input
           type="range"
@@ -98,7 +100,7 @@ export default function PasswordGenerator() {
           max="100"
           id="myRange"
           value={length}
-          onChange={handleInputChange}
+          onChange={handleInputChange} 
         />
         <label className="mr-3">{length}</label>
         <input
@@ -122,6 +124,7 @@ export default function PasswordGenerator() {
         />
         <label> Special Character</label>
       </div>
+    </div>
     </div>
   );
 }
